@@ -1,10 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.myapplication.MainActivity">
+    tools:context="@tools:sample/date/ddmmyy">
+    <item
+        android:id="@+id/eraser"
+        android:icon="@drawable/ic_eraser"
+        android:orderInCategory="110"
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:icon="@drawable/ic_brush_black_24dp"
+        android:orderInCategory="111"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/fill"
+        android:icon="@drawable/ic_toicon_icon_stone_fill"
+        android:orderInCategory="110"
+        app:showAsAction="always" />
 </menu>

@@ -21,7 +21,7 @@ public class PaintView extends View {
         super(context);
         brush.setAntiAlias(true);
         brush.setColor(Color.RED);
-        brush.setStyle(Paint.Style.FILL_AND_STROKE);
+        brush.setStyle(Paint.Style.STROKE);
         brush.setStrokeJoin(Paint.Join.ROUND);
         brush.setStrokeWidth(8f);
 

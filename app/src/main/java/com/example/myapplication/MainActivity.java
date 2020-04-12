@@ -1,24 +1,32 @@
 package com.example.myapplication;
 
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 
 public class MainActivity extends AppCompatActivity {
+
+    public ViewGroup.LayoutParams params;
+    private Path path=new Path();
+    private Paint brush = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PaintView paintView= new PaintView(this);
         setContentView(paintView);
+        FirstFragment frag =new FirstFragment();
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
