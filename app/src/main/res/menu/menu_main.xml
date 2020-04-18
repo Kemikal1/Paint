@@ -3,6 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="@tools:sample/date/ddmmyy">
     <item
+        android:id="@+id/menu"
+        android:title="menu"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/save"
+                android:title="save">
+
+            </item>
+            <item
+                android:id="@+id/new_"
+                android:title="new">
+
+            </item>
+        </menu>
+    </item>
+    <item
+        android:title="eraser"
         android:id="@+id/eraser"
         android:icon="@drawable/ic_eraser"
         android:orderInCategory="110"
@@ -17,5 +36,50 @@
         android:id="@+id/fill"
         android:icon="@drawable/ic_toicon_icon_stone_fill"
         android:orderInCategory="110"
+        android:title="fill"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/shape"
+        android:icon="@drawable/black_circle"
+        android:title="Shape"
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/rect_shape"
+                android:icon="@drawable/square_black_simple"
+                android:title="Rect_shape">
+
+            </item>
+            <item
+                android:id="@+id/circ_shape"
+                android:icon="@drawable/black_circle"
+                android:title="Circ_shape">
+
+            </item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/select"
+        android:icon="@drawable/dashed_square"
+        android:title="Select"
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/rect_select"
+                android:icon="@drawable/dashed_square"
+                >
+
+            </item>
+            <item
+                android:id="@+id/circ_select"
+                android:icon="@drawable/dashed_circle"
+                >
+
+            </item>
+        </menu>
+    </item>
+
+
 </menu>

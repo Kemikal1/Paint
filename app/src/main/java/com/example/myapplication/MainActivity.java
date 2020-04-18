@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
         FirstFragment frag =new FirstFragment();
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
+       setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        toolbar.setMinimumWidth(20);
     }
 
     @Override
