@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PaintView extends View {
     public LayoutParams params;
     private Path path=new Path();
-
     private Paint brush = new Paint();
 
     public PaintView(Context context) {
@@ -29,8 +28,10 @@ public class PaintView extends View {
 
     }
 
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
         float pointX = event.getX();
         float pointY = event.getY();
         switch (event.getAction()) {
@@ -44,11 +45,21 @@ public class PaintView extends View {
                 return false;
 
         }
-        postInvalidate();
-        return false;
+        invalidate();
+        return true;
     }
     @Override
     protected void onDraw(Canvas canvas){
         canvas.drawPath(path,brush);
+        invalidate();
+    }
+    public void eraser(){
+        brush.setColor(Color.WHITE);
+
+    }
+    public void brush()
+    {
+        brush.setColor(Color.RED);
+
     }
 }

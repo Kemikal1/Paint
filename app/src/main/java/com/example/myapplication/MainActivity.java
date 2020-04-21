@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
     public ViewGroup.LayoutParams params;
     private Path path=new Path();
     private Paint brush = new Paint();
+    private PaintView paintView;
+    FirstFragment frag=new FirstFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PaintView paintView= new PaintView(this);
-        setContentView(paintView);
-        FirstFragment frag =new FirstFragment();
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
-       setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setMinimumWidth(20);
     }
@@ -43,11 +43,17 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        frag = (FirstFragment) getSupportFragmentManager().findFragmentById(R.id.paint);
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch  (id){
+            case R.id.eraser:
+                frag.eraser();
+                return true;
+            case R.id.brush:
+               frag.brush();
+                return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

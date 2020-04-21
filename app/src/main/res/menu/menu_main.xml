@@ -27,10 +27,10 @@
         android:orderInCategory="110"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/brush"
         android:icon="@drawable/ic_brush_black_24dp"
         android:orderInCategory="111"
-        android:title="@string/action_settings"
+        android:title="brush"
         app:showAsAction="always" />
     <item
         android:id="@+id/fill"

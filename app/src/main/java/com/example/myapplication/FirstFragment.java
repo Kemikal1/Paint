@@ -15,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 public class FirstFragment extends Fragment {
 
     public FirstFragment() {}
+    private PaintView paintView;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -24,12 +25,14 @@ public class FirstFragment extends Fragment {
         View rootView=inflater.inflate(R.layout.fragment_first,container,false);
 
         LinearLayout Rl= (LinearLayout) rootView.findViewById(R.id.paint);
-        Rl.addView(new PaintView(getActivity()));
+        paintView=new PaintView(getActivity());
+        Rl.addView(paintView);
         // Inflate the layout for this fragment
         return rootView;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        paintView.brush();
         super.onViewCreated(view, savedInstanceState);
 /*
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
@@ -41,4 +44,12 @@ public class FirstFragment extends Fragment {
         });
         */
     }
+    public void eraser()
+    {
+        paintView.eraser();
+    }
+    public void brush(){
+        paintView.brush();
+    }
+
 }
