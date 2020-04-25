@@ -31,8 +31,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
+        android:id="@+id/contain"
         layout="@layout/content_main"
-        android:layout_height="683dp" />
+        android:layout_height="665dp" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
