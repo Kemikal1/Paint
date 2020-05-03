@@ -200,6 +200,10 @@ public class PaintView extends View {
         paths = new ArrayList<>();
         path= new Path();
         brushes= new ArrayList<>();
+        cBrushes=new ArrayList<>();
+        rBrushes=new ArrayList<>();
+        cCenters= new ArrayList<>();
+        rCorners = new ArrayList<>();
         invalidate();
     }
     //
