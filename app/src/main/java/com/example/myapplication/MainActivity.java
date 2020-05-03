@@ -125,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 });
                 saveDialog.show();
             }
+            case R.id.fill:
+                frag.fill();
         }
 
 
