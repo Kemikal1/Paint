@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -59,10 +60,27 @@ public class FirstFragment extends Fragment {
     public void eraser()
     {
         paint_brush.eraser();
-
     }
     public void brush(){
         paint_brush.brush();
     }
+    public void rectangle(){
+        paint_brush.rectangle();
+    }
+    public void circle(){
+        paint_brush.circle();
+    }
+
+    public void fill(){
+        paint_brush.fill();
+    }
+
+    public void StartNew(){
+        paint_brush.startNew();
+    }
+    public Bitmap getDraw(){
+        return paint_brush.getBitmap();
+    }
+
 
 }
